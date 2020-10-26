@@ -91,7 +91,8 @@
 
 // console.log(arr, sorted);
 
-//задача 6
+
+//задача 7
 // У вас есть массив объектов user, и в каждом из них есть user.name. 
 // Напишите код, который преобразует их в массив имён.
 
@@ -104,7 +105,7 @@
 // let names = users.map((item) => {item.name})
 // console.log(names);
 
-//Задача 7
+//Задача 8
 // У вас есть массив объектов user, и у каждого из объектов есть name, 
 // surname и id.
 
@@ -126,16 +127,90 @@
 
 // console.log(usersMapped);
 
-//Задача 8
-let vasya = { name: "Вася", age: 25 };
-let petya = { name: "Петя", age: 30 };
-let masha = { name: "Маша", age: 28 };
+//Задача 9
+// Напишите функцию sortByAge(users), 
+// которая принимает массив объектов со свойством age и сортирует их по нему.
 
-let arr = [vasya, petya, masha];
 
-let sortByAge = (array) => {
-    let newArray = array.sort(array[a].age - array[b].age);
-    return newArray;
-}
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
 
-console.log(sortByAge(arr));
+// let arr = [vasya, petya, masha];
+
+// let sortByAge = (array) => {
+//     let sortFunc = (a, b) => {
+
+//         if (a.age > b.age) return 1;
+//         if (a.age === b.age) return 0;
+//         if (a.age < b.age) return -1;
+//     }
+//     let newArray = array.sort(sortFunc);
+//     return newArray;
+
+// }
+
+// console.log(sortByAge(arr));
+
+//задача 10
+// Напишите функцию shuffle(array), 
+// которая перемешивает (переупорядочивает случайным образом) элементы массива.
+
+// Многократные прогоны через shuffle 
+// могут привести к разным последовательностям элементов.
+
+// let shuffle = (array) => {
+//     for (let i = array.length - 1; i > 0; i--) {
+//         let j = Math.floor(Math.random() * (i + 1));
+//         [array[i], array[j]] = [array[j], array[i]];
+//     }
+//     return array;
+// }
+
+
+// console.log(shuffle([1, 2, 3]))
+
+
+//задача 11
+// Напишите функцию getAverageAge(users), 
+// которая принимает массив объектов со свойством age и возвращает средний возраст.
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 29 };
+
+// let arr = [vasya, petya, masha];
+
+// let getAverageAge = (users) => {
+//     let sum = 0;
+//     for (let i = 0; i < users.length; i++) {
+//         sum += users[i].age
+//     }
+//     return Math.floor(sum / users.length);
+// }
+
+// console.log(getAverageAge(arr))
+
+//задача 12
+// Пусть arr – массив строк.
+
+// Напишите функцию unique(arr), которая возвращает массив, 
+// содержащий только уникальные элементы arr.
+
+
+
+// let strings = ["кришна", "кришна", "харе", "харе",
+//     "харе", "харе", "кришна", "кришна", ":-O"
+// ]
+
+// let unique = (arr) => {
+//     let newArr = [];
+//     for (let i of arr) {
+//         if (!(newArr.includes(i))) {
+//             newArr.push(i)
+//         }
+//     }
+//     return newArr;
+// }
+
+// console.log(unique(strings));
