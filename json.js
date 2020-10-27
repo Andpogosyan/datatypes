@@ -13,10 +13,7 @@
 
 // Задача 2
 
-// alert( JSON.stringify(meetup, function replacer(key, value) {
-//     alert(`${key}: ${value}`);
-//     return (key == 'occupiedBy') ? undefined : value;
-//   }));
+
 // В простых случаях циклических ссылок мы можем исключить свойство, 
 // из-за которого они возникают, из сериализации по его имени.
 
@@ -26,20 +23,20 @@
 // Напишите функцию replacer для JSON-преобразования, 
 // которая удалит свойства, ссылающиеся на meetup:
 
-let room = {
-    number: 23
-};
+// let room = {
+//     number: 23
+// };
 
-let meetup = {
-    title: "Совещание",
-    occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
-    place: room
-};
+// let meetup = {
+//     title: "Совещание",
+//     occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
+//     place: room
+// };
 
-room.occupiedBy = meetup;
-meetup.self = meetup;
+// room.occupiedBy = meetup;
+// meetup.self = meetup;
 
-console.log(JSON.stringify(meetup, function replacer(key, value) {
+// console.log(JSON.stringify(meetup, function replacer(key, value) {
 
-    return (key != '' && value == meetup) ? undefined : value;
-}));
+//     return (key != '' && value == meetup) ? undefined : value;
+// }));
